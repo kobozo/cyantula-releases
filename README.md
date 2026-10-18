@@ -21,8 +21,12 @@ curl -fsSL https://github.com/kobozo/cyantula-releases/releases/latest/download/
 
 Either way the platform is configured in the browser afterwards, at `/setup`,
 with the one-time token the installer prints. The machine then follows the
-stable channel and updates itself; `cyantula status`, `cyantula update` and
-`cyantula rollback` are the day-to-day commands.
+stable channel and updates itself within ten minutes of a release. Admin →
+Updates in the portal shows the running version, offers *Update now*, and
+switches the automatic update off for whoever prefers to choose the moment
+(`cyantula configure --auto-update off` does the same on the machine).
+`cyantula status`, `cyantula update` and `cyantula rollback` are the
+day-to-day commands.
 
 ## Releases
 
