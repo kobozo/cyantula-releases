@@ -19,6 +19,16 @@ On any Debian or Ubuntu machine with docker (or where docker may be installed):
 curl -fsSL https://github.com/kobozo/cyantula-releases/releases/latest/download/install.sh | sudo bash
 ```
 
+Already root, or on a machine without `sudo` (a minimal Debian, an LXC
+container)? Leave it out:
+
+```bash
+curl -fsSL https://github.com/kobozo/cyantula-releases/releases/latest/download/install.sh | bash
+```
+
+The installer needs an x86_64 (amd64) machine. It installs docker and the
+docker compose plugin when they are missing.
+
 Either way the platform is configured in the browser afterwards, at `/setup`,
 with the one-time token the installer prints. The machine then follows the
 stable channel and updates itself within ten minutes of a release. Admin →
