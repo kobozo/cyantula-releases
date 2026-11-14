@@ -38,6 +38,21 @@ switches the automatic update off for whoever prefers to choose the moment
 `cyantula status`, `cyantula update` and `cyantula rollback` are the
 day-to-day commands.
 
+### What the installer reports
+
+While it runs, the installer tells Kobozo's licence server how far it got: the
+name of each step (`install_started`, `docker_ready`, `cli_ready`,
+`gateway_running`, or `install_failed` and after which step), a random
+installation id, whether it ran as `install.sh` or `proxmox.sh`, and the
+channel. The setup wizard does the same for its steps. Never a hostname, an
+address, a setting or anything about who installed it. Add `--no-telemetry`
+(`... | sudo bash -s -- --no-telemetry`, or `proxmox.sh --no-telemetry`) to
+send nothing; the daily licence check-in then starts switched off too.
+
+The first step of the setup wizard offers to send you the setup guide by
+e-mail. That is optional: only when you fill it in does your name and e-mail
+reach Kobozo.
+
 ## Releases
 
 Every release carries `manifest.json` and its Ed25519 signature; the
